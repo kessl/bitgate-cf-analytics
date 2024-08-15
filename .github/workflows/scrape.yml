@@ -1,0 +1,28 @@
+on:
+  push:
+  workflow_dispatch:
+  # schedule:
+  #   - cron:  '27 7 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Fetch yesterday's analytics & append to file
+      run: |-
+        ENDPOINT=https://api.cloudflare.com/client/v4/graphql
+        AUTH_HEADER="Authorization: Bearer ${{ secrets.CF_TOKEN }}"
+        VARIABLES="{\"tag\":\"${{ secrets.CF_ZONE_TAG }}\",\"date\":\"$(date -d yesterday --iso-8601)\"}"
+        BODY=$(jq -c -n --arg query "$(cat query.graphql)" --argjson variables "$VARIABLES" '{query: $query, variables: $variables}')
+        curl -s "$ENDPOINT" -H "$AUTH_HEADER" -d "$BODY" > data.json
+        cat data.json | jq '.data.viewer.zones[0].httpRequests1dGroups[0]' | jq -r tostring >> data.jsonl
+    - name: Commit and push
+      run: |-
+        git config user.name "Scraper"
+        git config user.email "scraper@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "CF analytics scrape: ${timestamp}" || exit 0
+        git push

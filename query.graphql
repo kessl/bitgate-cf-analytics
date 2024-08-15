@@ -1,0 +1,36 @@
+{
+  viewer {
+    zones(filter: { zoneTag: $tag }) {
+      httpRequests1dGroups(limit: 1, filter: { date: $date }) {
+        avg {
+          bytes
+          sampleInterval
+        }
+        dimensions {
+          date
+        }
+        sum {
+          browserMap {
+            pageViews
+            uaBrowserFamily
+          }
+          bytes
+          countryMap {
+            bytes
+            clientCountryName
+            requests
+          }
+          ipClassMap {
+            ipType
+            requests
+          }
+          pageViews
+          requests
+        }
+        uniq {
+          uniques
+        }
+      }
+    }
+  }
+}
