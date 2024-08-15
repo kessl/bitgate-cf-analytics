@@ -1,8 +1,6 @@
 on:
-  push:
-  workflow_dispatch:
-  # schedule:
-  #   - cron:  '27 7 * * *'
+  schedule:
+    - cron:  '27 7 * * *'
 
 jobs:
   scrape:
@@ -18,6 +16,7 @@ jobs:
         BODY=$(jq -c -n --arg query "$(cat query.graphql)" --argjson variables "$VARIABLES" '{query: $query, variables: $variables}')
         curl -s "$ENDPOINT" -H "$AUTH_HEADER" -d "$BODY" > data.json
         cat data.json | jq '.data.viewer.zones[0].httpRequests1dGroups[0]' | jq -r tostring >> data.jsonl
+        rm data.json
     - name: Commit and push
       run: |-
         git config user.name "Scraper"
