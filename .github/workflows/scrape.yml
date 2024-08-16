@@ -14,9 +14,8 @@ jobs:
         AUTH_HEADER="Authorization: Bearer ${{ secrets.CF_TOKEN }}"
         VARIABLES="{\"tag\":\"${{ secrets.CF_ZONE_TAG }}\",\"date\":\"$(date -d yesterday --iso-8601)\"}"
         BODY=$(jq -c -n --arg query "$(cat query.graphql)" --argjson variables "$VARIABLES" '{query: $query, variables: $variables}')
-        curl -s "$ENDPOINT" -H "$AUTH_HEADER" -d "$BODY" > data.json
-        cat data.json | jq '.data.viewer.zones[0].httpRequests1dGroups[0]' | jq -r tostring >> data.jsonl
-        rm data.json
+        curl -s "$ENDPOINT" -H "$AUTH_HEADER" -d "$BODY" | jq '.data.viewer.zones[0].httpRequests1dGroups[0]' > day.json
+        cat day.json | jq -r tostring >> data.jsonl
     - name: Commit and push
       run: |-
         git config user.name "Scraper"
@@ -25,3 +24,22 @@ jobs:
         timestamp=$(date -u)
         git commit -m "CF analytics scrape: ${timestamp}" || exit 0
         git push
+    - name: Prepare google sheet row
+      run: |-
+        DAY_JSON=$(cat day.json | jq '[.dimensions.date, .avg.bytes, .sum.bytes, .sum.pageViews, .sum.requests, (.sum.ipClassMap[] | select(.ipType=="searchEngine").requests), .uniq.uniques]' | jq -r tostring | sed 's/"/\\"/g')
+        echo "DAY_JSON=$DAY_JSON" >> $GITHUB_ENV
+    - name: Append to google sheet
+      uses: jroehl/gsheet.action@v2.1.1
+      env:
+        GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+        GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+      with:
+        spreadsheetId: ${{ secrets.GSHEET_SPREADSHEET_ID }}
+        commands: |
+          [{ "command": "appendData", "args": { "worksheetTitle": "data", "minCol": 1, "data": "[${{ env.DAY_JSON }}]" }}]
+    - name: Clean up
+      env:
+        RESULTS: ${{ steps.update_worksheet.outputs.results }}
+      run: |-
+        echo "$RESULTS" | jq
+        rm day.json
