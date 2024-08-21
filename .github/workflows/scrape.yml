@@ -36,7 +36,7 @@ jobs:
       with:
         spreadsheetId: ${{ secrets.GSHEET_SPREADSHEET_ID }}
         commands: |
-          [{ "command": "appendData", "args": { "worksheetTitle": "data", "minCol": 1, "data": "[${{ env.DAY_JSON }}]" }}]
+          [{ "command": "appendData", "args": { "worksheetTitle": "data", "minCol": 1, "valueInputOption": "USER_ENTERED", "data": "[${{ env.DAY_JSON }}]" }}]
     - name: Clean up
       env:
         RESULTS: ${{ steps.update_worksheet.outputs.results }}
