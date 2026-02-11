@@ -1,302 +1,299 @@
 {
   "avg": {
-    "bytes": 4773.9989498004625,
+    "bytes": 3888.712746271906,
     "sampleInterval": 1
   },
   "dimensions": {
-    "date": "2026-02-09"
+    "date": "2026-02-10"
   },
   "sum": {
     "browserMap": [
       {
-        "pageViews": 1537,
+        "pageViews": 1377,
         "uaBrowserFamily": "Unknown"
       },
       {
-        "pageViews": 103,
+        "pageViews": 81,
         "uaBrowserFamily": "Chrome"
       },
       {
-        "pageViews": 8,
+        "pageViews": 4,
+        "uaBrowserFamily": "Safari"
+      },
+      {
+        "pageViews": 30,
         "uaBrowserFamily": "Firefox"
       },
       {
-        "pageViews": 1,
-        "uaBrowserFamily": "AppleBot"
-      },
-      {
-        "pageViews": 1,
-        "uaBrowserFamily": "BingBot"
-      },
-      {
-        "pageViews": 2,
-        "uaBrowserFamily": "GoogleBot"
-      },
-      {
-        "pageViews": 2,
+        "pageViews": 9,
         "uaBrowserFamily": "YandexBot"
       },
       {
-        "pageViews": 23,
+        "pageViews": 19,
         "uaBrowserFamily": "MobileSafari"
       },
       {
-        "pageViews": 1,
-        "uaBrowserFamily": "OperaMobile"
+        "pageViews": 10,
+        "uaBrowserFamily": "ChromeMobile"
       },
       {
-        "pageViews": 3,
-        "uaBrowserFamily": "Edge"
-      },
-      {
-        "pageViews": 1,
-        "uaBrowserFamily": "ChromeHeadless"
+        "pageViews": 5,
+        "uaBrowserFamily": "Facebook"
       },
       {
         "pageViews": 1,
+        "uaBrowserFamily": "ChromeDerivative"
+      },
+      {
+        "pageViews": 1613,
         "uaBrowserFamily": "Curl"
       }
     ],
-    "bytes": 22729009,
+    "bytes": 35725604,
     "countryMap": [
       {
-        "bytes": 4023,
-        "clientCountryName": "AE",
-        "requests": 1
-      },
-      {
-        "bytes": 3154,
-        "clientCountryName": "AO",
-        "requests": 1
-      },
-      {
-        "bytes": 896,
+        "bytes": 2481,
         "clientCountryName": "AR",
-        "requests": 2
-      },
-      {
-        "bytes": 3464,
-        "clientCountryName": "AU",
-        "requests": 8
-      },
-      {
-        "bytes": 3135,
-        "clientCountryName": "AZ",
-        "requests": 1
-      },
-      {
-        "bytes": 5546,
-        "clientCountryName": "BD",
         "requests": 3
       },
       {
-        "bytes": 6487,
+        "bytes": 1835963,
+        "clientCountryName": "AU",
+        "requests": 303
+      },
+      {
+        "bytes": 6496,
         "clientCountryName": "BE",
         "requests": 1
       },
       {
-        "bytes": 71035,
+        "bytes": 29221,
         "clientCountryName": "BG",
-        "requests": 4
-      },
-      {
-        "bytes": 611,
-        "clientCountryName": "BH",
         "requests": 1
       },
       {
-        "bytes": 3123,
-        "clientCountryName": "BO",
-        "requests": 1
-      },
-      {
-        "bytes": 24453,
+        "bytes": 622046,
         "clientCountryName": "BR",
-        "requests": 11
+        "requests": 21
       },
       {
-        "bytes": 2840763,
+        "bytes": 109419,
         "clientCountryName": "CA",
-        "requests": 543
+        "requests": 45
       },
       {
-        "bytes": 82445,
+        "bytes": 140292,
+        "clientCountryName": "CH",
+        "requests": 26
+      },
+      {
+        "bytes": 934777,
         "clientCountryName": "CN",
-        "requests": 40
+        "requests": 41
       },
       {
-        "bytes": 11406,
+        "bytes": 3585,
+        "clientCountryName": "CR",
+        "requests": 1
+      },
+      {
+        "bytes": 31645,
         "clientCountryName": "CZ",
-        "requests": 7
-      },
-      {
-        "bytes": 31588,
-        "clientCountryName": "DE",
-        "requests": 20
-      },
-      {
-        "bytes": 4092,
-        "clientCountryName": "DZ",
-        "requests": 3
-      },
-      {
-        "bytes": 2277491,
-        "clientCountryName": "ES",
-        "requests": 658
-      },
-      {
-        "bytes": 6670,
-        "clientCountryName": "FI",
         "requests": 6
       },
       {
-        "bytes": 2495725,
-        "clientCountryName": "FR",
-        "requests": 698
+        "bytes": 508780,
+        "clientCountryName": "DE",
+        "requests": 32
       },
       {
-        "bytes": 32448,
-        "clientCountryName": "GB",
+        "bytes": 2010046,
+        "clientCountryName": "ES",
+        "requests": 361
+      },
+      {
+        "bytes": 1556,
+        "clientCountryName": "FI",
         "requests": 2
       },
       {
-        "bytes": 294564,
+        "bytes": 8071037,
+        "clientCountryName": "FR",
+        "requests": 4063
+      },
+      {
+        "bytes": 65366,
+        "clientCountryName": "GB",
+        "requests": 4
+      },
+      {
+        "bytes": 932495,
         "clientCountryName": "HK",
-        "requests": 47
+        "requests": 304
       },
       {
-        "bytes": 1036063,
+        "bytes": 11389,
+        "clientCountryName": "ID",
+        "requests": 4
+      },
+      {
+        "bytes": 1547101,
         "clientCountryName": "IE",
-        "requests": 160
+        "requests": 439
       },
       {
-        "bytes": 238123,
+        "bytes": 64933,
         "clientCountryName": "IN",
-        "requests": 36
-      },
-      {
-        "bytes": 1616953,
-        "clientCountryName": "IT",
-        "requests": 299
-      },
-      {
-        "bytes": 64172,
-        "clientCountryName": "JP",
-        "requests": 129
-      },
-      {
-        "bytes": 3452136,
-        "clientCountryName": "KR",
-        "requests": 865
-      },
-      {
-        "bytes": 21406,
-        "clientCountryName": "LT",
-        "requests": 10
-      },
-      {
-        "bytes": 5723,
-        "clientCountryName": "MX",
         "requests": 3
       },
       {
-        "bytes": 244787,
-        "clientCountryName": "NL",
-        "requests": 97
-      },
-      {
-        "bytes": 84309,
-        "clientCountryName": "NO",
-        "requests": 13
-      },
-      {
-        "bytes": 3139,
-        "clientCountryName": "PE",
-        "requests": 1
-      },
-      {
-        "bytes": 273933,
-        "clientCountryName": "PL",
-        "requests": 22
-      },
-      {
-        "bytes": 7657,
-        "clientCountryName": "PT",
-        "requests": 1
-      },
-      {
-        "bytes": 864,
-        "clientCountryName": "RO",
+        "bytes": 4722,
+        "clientCountryName": "IQ",
         "requests": 2
       },
       {
-        "bytes": 72768,
-        "clientCountryName": "RU",
-        "requests": 18
+        "bytes": 140331,
+        "clientCountryName": "IT",
+        "requests": 26
       },
       {
-        "bytes": 3583,
+        "bytes": 3977874,
+        "clientCountryName": "JP",
+        "requests": 896
+      },
+      {
+        "bytes": 4511,
+        "clientCountryName": "KR",
+        "requests": 3
+      },
+      {
+        "bytes": 5399,
+        "clientCountryName": "KZ",
+        "requests": 1
+      },
+      {
+        "bytes": 14242,
+        "clientCountryName": "LT",
+        "requests": 5
+      },
+      {
+        "bytes": 480,
+        "clientCountryName": "MA",
+        "requests": 1
+      },
+      {
+        "bytes": 3131,
+        "clientCountryName": "MD",
+        "requests": 1
+      },
+      {
+        "bytes": 482,
+        "clientCountryName": "MX",
+        "requests": 1
+      },
+      {
+        "bytes": 9279,
+        "clientCountryName": "MY",
+        "requests": 2
+      },
+      {
+        "bytes": 118861,
+        "clientCountryName": "NL",
+        "requests": 47
+      },
+      {
+        "bytes": 280787,
+        "clientCountryName": "NO",
+        "requests": 52
+      },
+      {
+        "bytes": 2901,
+        "clientCountryName": "PH",
+        "requests": 1
+      },
+      {
+        "bytes": 2323440,
+        "clientCountryName": "PL",
+        "requests": 418
+      },
+      {
+        "bytes": 77289,
+        "clientCountryName": "RU",
+        "requests": 29
+      },
+      {
+        "bytes": 780,
         "clientCountryName": "SA",
         "requests": 1
       },
       {
-        "bytes": 15528,
+        "bytes": 12536,
         "clientCountryName": "SE",
-        "requests": 11
+        "requests": 4
       },
       {
-        "bytes": 1890067,
+        "bytes": 3571227,
         "clientCountryName": "SG",
-        "requests": 369
+        "requests": 872
       },
       {
-        "bytes": 7568,
+        "bytes": 14343,
+        "clientCountryName": "SI",
+        "requests": 5
+      },
+      {
+        "bytes": 4075,
+        "clientCountryName": "TR",
+        "requests": 3
+      },
+      {
+        "bytes": 7545,
         "clientCountryName": "TW",
         "requests": 2
       },
       {
-        "bytes": 5445305,
+        "bytes": 7974837,
         "clientCountryName": "US",
-        "requests": 651
+        "requests": 1119
       },
       {
-        "bytes": 1526,
-        "clientCountryName": "UY",
+        "bytes": 612,
+        "clientCountryName": "UZ",
         "requests": 1
       },
       {
-        "bytes": 27808,
+        "bytes": 246132,
         "clientCountryName": "VN",
-        "requests": 10
+        "requests": 34
       },
       {
-        "bytes": 12472,
+        "bytes": 1160,
         "clientCountryName": "ZA",
-        "requests": 2
+        "requests": 1
       }
     ],
     "ipClassMap": [
       {
         "ipType": "unknown",
-        "requests": 192
+        "requests": 116
       },
       {
         "ipType": "searchEngine",
-        "requests": 18
-      },
-      {
-        "ipType": "allowlist",
-        "requests": 6
+        "requests": 15
       },
       {
         "ipType": "noRecord",
-        "requests": 4545
+        "requests": 9046
+      },
+      {
+        "ipType": "tor",
+        "requests": 10
       }
     ],
-    "pageViews": 1683,
-    "requests": 4761
+    "pageViews": 3149,
+    "requests": 9187
   },
   "uniq": {
-    "uniques": 313
+    "uniques": 284
   }
 }
